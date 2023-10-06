@@ -1,0 +1,7 @@
+{
+
+    "nombre":"pedro",
+    "apellidos":"gomez",
+    "edad":20,
+    "gastos": [100,200,50,20]
+}

@@ -1,0 +1,8 @@
+Que soporta una estructura json
+
+string
+number
+object
+array
+boolean
+null

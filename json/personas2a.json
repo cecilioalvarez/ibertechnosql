@@ -1,0 +1,13 @@
+{
+
+    "nombre":"pedro",
+    "apellidos":"gomez",
+    "edad":20,
+    "gastos": [100,200,50,20],
+    "historial" : {
+
+        "descripcion": "historial sin enfermedades",
+        "fecha": "2020-10-10"
+    }
+
+}
