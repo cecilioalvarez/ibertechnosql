@@ -1,0 +1,26 @@
+db.clientes.find();
+//este consulta lo que hace es selecciona a los que se llama david where
+db.clientes.find({"nombre":"david"});
+// selecionar por apellidos
+db.clientes.find({"apellidos":"gomez"});
+//seleccion multiple
+db.clientes.find({"nombre":"david","apellidos":"gomez"});
+db.clientes.find({});
+db.clientes.find({},{nombre:1});
+db.clientes.find({},{nombre:1,_id:0});
+db.clientes.find({},{_id:0});
+db.clientes.find({$and:[{"nombre":"david"},{"apellidos":"gomez"}]}) 
+db.clientes.find({$or:[{"nombre":"david"},{"apellidos":"gomez"}]}) 
+db.clientes.find({},{apellidos:1,_id:0});
+db.clientes.distinct("apellidos");
+db.clientes.countDocuments();
+//igualdad no igualdad
+db.clientes.find({apellidos:{$eq:"martinez"}});
+db.clientes.find({apellidos:{$ne:"martinez"}});
+// queremos sacar la lista de clientes que se apelliden gomez o martinez
+db.clientes.find({apellidos:"martinez"});
+db.clientes.find({apellidos:"gomez"});
+// combina con un or
+db.clientes.find({$or:[{apellidos:{$eq:"martinez"}},{apellidos:{$eq:"gomez"}}]})
+
+
