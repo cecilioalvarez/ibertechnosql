@@ -55,3 +55,8 @@ db.clientes.find({apellidos:/ez$/},{nombre:1,apellidos:1,dni:1,_id:0});
 db.clientes.find({apellidos:{$regex:/^g..ez$/}},{nombre:1,apellidos:1,dni:1,_id:0});
 db.clientes.find({dni:{$regex:/^\d{3}/}},{nombre:1,apellidos:1,dni:1,_id:0});
 db.clientes.find({dni:{$regex:/[AB]$/}},{nombre:1,apellidos:1,dni:1,_id:0});
+
+// insertar dos ordenadores mas a la coleccion desde la consola
+// sacar los ordenadores que tienen un importe de mas de 2000 euros
+// obtener los ordenadores que sean sobremesa  y tengan 32 gigas de ram
+// contar todos los ordenadors mayores de 1500 euros
