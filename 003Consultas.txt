@@ -79,3 +79,13 @@ db.ordenadores.find({discos:"1TB-SDD"},{discos:1,_id:0,modelo:1});
  db.ordenadores.update({"marca":"Dell"},{"$set":{discos:["8TB-HD","1TB-SDD"]}});
 db.ordenadores.find({discos:["1TB-SDD","8TB-HD"]},{discos:1,_id:0,modelo:1});
 db.ordenadores.find({discos:{$all:["1TB-SDD","8TB-HD"]}},{discos:1,_id:0,modelo:1});
+db.ordenadores.find({$or:[{discos:"1TB-SDD"},{discos:"8TB-HD"}]},{discos:1,_id:0,modelo:1});
+
+ db.ordenadores.update({"marca":"Sansumg"},{"$set":{monitor:{pulgadas:20, gama:"gaming"}}});
+ db.ordenadores.update({"marca":"Lenovo"},{"$set":{monitor:{pulgadas:30, gama:"office"}}});
+  db.ordenadores.update({"marca":"HP"},{"$set":{monitor:{pulgadas:24, gama:"office"}}});
+  db.ordenadores.find({},{marca:1,monitor:1,_id:0});
+  db.ordenadores.find({},{marca:1,"monitor.pulgadas":1,_id:0});
+  db.ordenadores.find({"monitor.pulgadas":30},{marca:1,"monitor.pulgadas":1,_id:0});
+  db.clientes.find({edad:{$gt:20}});
+db.ordenadores.find({"monitor.pulgadas":{$gte:24}},{marca:1,"monitor.pulgadas":1,_id:0});
