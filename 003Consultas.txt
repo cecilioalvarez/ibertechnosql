@@ -22,5 +22,26 @@ db.clientes.find({apellidos:"martinez"});
 db.clientes.find({apellidos:"gomez"});
 // combina con un or
 db.clientes.find({$or:[{apellidos:{$eq:"martinez"}},{apellidos:{$eq:"gomez"}}]})
+//los mayores
+db.clientes.find({edad:{$gt:20}});
+db.clientes.find({edad:{$lt:20}});
+//clausula between
+db.clientes.find ({edad:{$gt:20,$lt:50}});
+db.clientes.find({edad:{$gte:20}});
+db.clientes.find({edad:{$lte:20}});
+db.clientes.countDocuments({edad:{$lte:20}});
+db.clientes.find({apellidos:{$exists:false}})
+db.clientes.find({apellidos:null})
+db.clientes.insertOne({"nombre":"juan",apellidos:null});
+db.clientes.find({nombre:{$in:["juan","ana"]}});
+db.clientes.find({nombre:{$nin:["juan","ana"]}});
+db.clientes.find({$or:[{apellidos:{$eq:"martinez"}},{apellidos:{$eq:"gomez"}}]},{nombre:1,apellidos:1,_id:0})
+db.clientes.find({$nor:[{apellidos:{$eq:"martinez"}},{apellidos:{$eq:"gomez"}}]},{nombre:1,apellidos:1,_id:0})
+db.clientes.find({$and:[{"nombre":"david"},{"apellidos":"gomez"}]},{nombre:1,apellidos:1,_id:0}) 
+db.clientes.find( {nombre : {$not:{$and:[{"nombre":"david"},{"apellidos":"gomez"}]}}},{nombre:1,apellidos:1,_id:0}) 
+db.clientes.find( {nombre : {$not:{$eq:"david"}}}); 
+//estoy combinando el decir oye el el "nombre" no sea david pero no puedo decir que el apellidos gomez
+db.clientes.find( {nombre : {$not:{$in:["juan","ana"]}}}); 
+db.clientes.find({$nor:[{nombre:"juan"},{nombre:"ana"},{apellidos:"alvarez"}]});
 
 
