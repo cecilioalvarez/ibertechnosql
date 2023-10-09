@@ -96,3 +96,10 @@ db.ordenadores.find().skip(1).limit(2);
 db.ordenadores.find().sort(modelo:-1).skip(1).limit(2);
 db.ordenadores.find().sort({modelo:-1});
 db.ordenadores.find().sort({modelo:1});
+
+db.ordenadores.find().sort({modelo:1}).skip(2).limit(1);
+
+// añadir dos ordenadores mas a la lista desde la consola
+// segundo realizar una consulta que nos ordene los ordenadores por tamaño de monitor
+// del mas pequeño al mas grande
+ db.ordenadores.update({"modelo":"modelito"},{"$set":{monitor:{pulgadas:30, gama:"office"}}});
