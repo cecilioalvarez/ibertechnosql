@@ -89,3 +89,10 @@ db.ordenadores.find({$or:[{discos:"1TB-SDD"},{discos:"8TB-HD"}]},{discos:1,_id:0
   db.ordenadores.find({"monitor.pulgadas":30},{marca:1,"monitor.pulgadas":1,_id:0});
   db.clientes.find({edad:{$gt:20}});
 db.ordenadores.find({"monitor.pulgadas":{$gte:24}},{marca:1,"monitor.pulgadas":1,_id:0});
+
+///////////
+db.ordenadores.find().limit(2);
+db.ordenadores.find().skip(1).limit(2);
+db.ordenadores.find().sort(modelo:-1).skip(1).limit(2);
+db.ordenadores.find().sort({modelo:-1});
+db.ordenadores.find().sort({modelo:1});
