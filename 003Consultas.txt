@@ -43,5 +43,15 @@ db.clientes.find( {nombre : {$not:{$eq:"david"}}});
 //estoy combinando el decir oye el el "nombre" no sea david pero no puedo decir que el apellidos gomez
 db.clientes.find( {nombre : {$not:{$in:["juan","ana"]}}}); 
 db.clientes.find({$nor:[{nombre:"juan"},{nombre:"ana"},{apellidos:"alvarez"}]});
-
-
+db.clientes.find({nombre:{$regex:"ana"}})
+db.clientes.find({nombre:{$regex:/ana/}},{nombre:1,apellidos:1});
+db.clientes.find({nombre:{$regex://}},{nombre:1,apellidos:1});
+db.clientes.find({nombre:{$regex:/pedro.david/}},{nombre:1,apellidos:1});
+db.clientes.find({dni:{$regex:/\d{2}/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({dni:{$regex:/^[12]/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({dni:{$regex:/^12/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({apellidos:{$regex:/ez$/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({apellidos:/ez$/},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({apellidos:{$regex:/^g..ez$/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({dni:{$regex:/^\d{3}/}},{nombre:1,apellidos:1,dni:1,_id:0});
+db.clientes.find({dni:{$regex:/[AB]$/}},{nombre:1,apellidos:1,dni:1,_id:0});

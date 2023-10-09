@@ -1,0 +1,44 @@
+[
+
+{
+
+    "modelo":" modeloA",
+    "precio": 500,
+    "memoria":16,
+    "categoria":" sobremesa",
+    "marca": "Dell"
+  
+    
+},
+{
+
+    "modelo":" modeloB",
+    "precio": 700,
+    "memoria":32,
+    "categoria":" todoenuno",
+    "marca": "Sansumg"
+  
+    
+},
+{
+
+    "modelo":" modeloC",
+    "precio": 2000,
+    "memoria":32,
+    "categoria":" sobremesa",
+    "marca": "HP"
+  
+    
+},
+{
+
+    "modelo":" modeloA",
+    "precio": 1500,
+    "memoria":8,
+    "categoria":" sobremesa",
+    "marca": "Lenovo"
+  
+    
+}
+
+]
