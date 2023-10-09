@@ -1,0 +1,58 @@
+[
+    {
+        "_id": 1,
+        "dni": "1234A",
+        "nombre": "juan",
+        "apellidos": "sanchez",
+        "edad":20
+    },
+    {
+        "_id": 2,
+        "dni": "897A",
+        "nombre": "ana",
+        "apellidos": "blanco",
+        "edad":30
+    },
+    {
+        "_id": 3,
+        "dni": "2543B",
+        "nombre": "maria",
+        "apellidos": "alvarez",
+        "edad":30
+    },
+    {
+        "_id": 4,
+        "dni": "12345A",
+        "nombre": "ana",
+        "apellidos": "blanco",
+        "edad":40
+    },
+    {
+        "_id": 5,
+        "dni": "23B",
+        "nombre": "antonio",
+        "apellidos": "martinez",
+        "edad":40
+    },
+    {
+        "_id": 6,
+        "dni": "678C",
+        "nombre": "david",
+        "apellidos": "gomez",
+        "edad":40
+    },
+    {
+        "_id": 7,
+        "dni": "987A",
+        "nombre": "laura",
+        "apellidos": "gomez",
+        "edad":15
+    }
+,
+    {
+        "_id": 8,
+        "dni": "9751",
+        "nombre": "pepe"
+       
+    }
+]

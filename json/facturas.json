@@ -1,0 +1,29 @@
+{
+    "numero": 100,
+    "concepto": "ordenador",
+    "lineas": [
+        {
+            "numero": 1,
+            "concepto": "cpu",
+            "importe": 200
+        },
+        {
+            "numero": 2,
+            "concepto": "monitor",
+            "importe": 200
+        }
+    ],
+    "cliente": {
+        "dni": 1234,
+        "nombre": "pepito",
+        "apellidos": "gomez",
+        "direccionFacturacion": {
+            "calle": "micalle",
+            "numero": 1
+        },
+        "direccionFisica": {
+            "calle": "micalle2",
+            "numero": 1
+        }
+    }
+}
