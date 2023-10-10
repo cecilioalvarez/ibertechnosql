@@ -1,0 +1,16 @@
+//recibe un array de operaciones a llevar a cabo
+
+db.facturas.aggregate([{$project:{_id:0,fecha:1}},{$limit:3}])
+db.facturas.aggregate([{$project:{_id:0,fecha:{$year:"$fecha"}}},{$limit:3}])
+db.facturas.aggregate([{$project:{_id:0,mes:{$month:"$fecha"}}},{$limit:3}])
+db.facturas.aggregate([{$project:{_id:0,diasemana:{$dayOfWeek:"$fecha"}}},{$limit:3}])
+
+db.facturas.aggregate([{$project:{_id:0,mesInicial:{$month:"$fecha"},mesFinal:{$month:{$dateAdd:{startDate:"$fecha",unit:"month",amount:1}}}}},{$limit:3}])
+
+db.facturas.aggregate([{$project:{_id:0,concepto:1}},{$limit:3}])
+
+db.facturas.aggregate([{$project:{_id:0,concepto:{$concat:["compra de $concepto ","$concepto"]}}},{$limit:3}])
+db.facturas.aggregate([{$project:{_id:0,concepto:{$toUpper:"$concepto"}}},{$limit:3}])
+
+
+
