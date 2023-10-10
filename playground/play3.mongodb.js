@@ -5,14 +5,14 @@ use('oesia1');
 //db.facturas.countDocuments();
 var lista=db.facturas.find().toArray();
 var listaModificada= lista.map((elemento)=> {
+        
         elemento.importe=elemento.importe+1;
         return elemento;
         
 }).forEach(elemento => {
 
-
-   //db.facturas.update({_id: elemento.id},{"$set":{importe:elemento.importe}});
-    db.facturas.update(elemento);
+    db.facturas.updateOne({_id: elemento._id},{"$set":{importe:elemento.importe}});
+    //db.facturas.update(elemento);
 });
 
 
