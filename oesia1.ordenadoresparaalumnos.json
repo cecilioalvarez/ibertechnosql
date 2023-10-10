@@ -1,0 +1,87 @@
+[{
+  "_id": {
+    "$oid": "6523ccc3be67cae364131195"
+  },
+  "modelo": "modeloA",
+  "precio": 500,
+  "memoria": 16,
+  "categoria": " sobremesa",
+  "marca": "Dell",
+  "color": "rojo",
+  "discos": [
+    "8TB-HD",
+    "1TB-SDD"
+  ],
+  "cliente_id": 1
+},
+{
+  "_id": {
+    "$oid": "6523ccc3be67cae364131196"
+  },
+  "modelo": "modeloB",
+  "precio": 700,
+  "memoria": 32,
+  "categoria": " todoenuno",
+  "marca": "Sansumg",
+  "color": "verde",
+  "discos": [
+    "1TB-SDD",
+    "8TB-HD"
+  ],
+  "monitor": {
+    "pulgadas": 20,
+    "gama": "gaming"
+  },
+  "cliente_id": 2
+},
+{
+  "_id": {
+    "$oid": "6523ccc3be67cae364131197"
+  },
+  "modelo": "modeloC",
+  "precio": 2000,
+  "memoria": 32,
+  "categoria": " sobremesa",
+  "marca": "HP",
+  "color": "negro",
+  "discos": [
+    "2TB-SDD",
+    "8TB-HD"
+  ],
+  "monitor": {
+    "pulgadas": 24,
+    "gama": "office"
+  },
+  "cliente_id": 2
+},
+{
+  "_id": {
+    "$oid": "6523ccc3be67cae364131198"
+  },
+  "modelo": "modeloA",
+  "precio": 1500,
+  "memoria": 8,
+  "categoria": " sobremesa",
+  "marca": "Lenovo",
+  "color": "azul",
+  "discos": [
+    "1TB-SDD",
+    "4TB-HD"
+  ],
+  "monitor": {
+    "pulgadas": 30,
+    "gama": "office"
+  },
+  "cliente_id": 3
+},
+{
+  "_id": {
+    "$oid": "6523e69c272a48f393a4400c"
+  },
+  "modelo": "modelito",
+  "monitor": {
+    "pulgadas": 30,
+    "gama": "office"
+  },
+  "cliente_id": 4
+}]
