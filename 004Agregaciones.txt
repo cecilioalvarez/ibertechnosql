@@ -6,3 +6,15 @@ db.ordenadores.aggregate([{$project:{_id:1, modelo:1,precio:1}},{$match:{precio:
 db.ordenadores.aggregate([{$match:{precio:700}},{$project:{_id:1, modelo:1,precio:1}}])
 db.ordenadores.aggregate([{$project:{_id:1, modelo:1,precio:1}},{$sort:{precio:1}}])
 db.ordenadores.aggregate([{$project:{_id:1, modelo:1,precio:1}},{$sort:{precio:1}},{$limit:2}])
+db.ordenadores.aggregate([{$project:{_id:0,modelo:1,marca:1,precio:1}},{$match:{precio:700}}]);
+db.ordenadores.aggregate([{$project:{_id:0,modelo:1,marca:1,precio:1}},{$match:{precio:700}}]);
+db.ordenadores.aggregate([{$match:{precio:700}},{$project:{_id:1, modelo:1,precio:1}}])
+db.ordenadores.aggregate([{$group:{_id:"$color"}}])
+db.ordenadores.aggregate([{$group:{_id:"$modelo"}}])
+db.ordenadores.aggregate([{$project:{_id:0,modelo:1}}]);
+db.ordenadores.aggregate([{$group:{_id:"$modelo",importeTotal:{$sum:"$precio"}}}])
+db.ordenadores.aggregate([{$group:{_id:"$modelo",maximo:{$max:"$precio"}}}])
+db.ordenadores.aggregate([{$group:{_id:"$modelo",minimo:{$min:"$precio"}}}])
+db.ordenadores.aggregate([{$group:{_id:"$modelo",media:{$avg:"$precio"}}}])
+db.ordenadores.aggregate([{$group:{_id:"$modelo",maximo:{$avg:"$precio"},minimo:{$min:"$precio"}}}])
+db.ordenadores.aggregate([$group:{_id:{{"$arrayElemAt":["$discos",0]}}}])
