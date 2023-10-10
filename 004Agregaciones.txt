@@ -36,6 +36,15 @@ clientes
 
 
 db.clientes.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores",pipeline :[{$project:{color:1,modelo:1,precio:1}}]}}]);
+db.clientes.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores",pipeline :[{$project:{color:1,modelo:1,precio:1}}]}},{"$unwind":"$ordenadores"}]);
+
+db.clientes.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores",pipeline :[{$project:{color:1,modelo:1,precio:1}}]}},{"$unwind":"$ordenadores"},{$group:{_id:"total",importeTotal:{$sum:"$ordenadores.precio"}}}]);
+
+
+db.clientes.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores",pipeline :[{$project:{color:1,modelo:1,precio:1}}]}},{"$unwind":"$ordenadores"},{$group:{_id:"$_id",importeTotal:{$sum:"$ordenadores.precio"}}}]);
+
+
+
 
 
 
