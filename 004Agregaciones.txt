@@ -23,4 +23,18 @@ db.ordenadores.aggregate([{$group:{_id:{"$arrayElemAt":["$discos",0]}}}])
 db.clientes.find({_id:1},{_id:1,nombre:1});
 db.ordenadores2.find({cliente_id:1});
 //en mi clientes tengo el id
-db.clientes.aggregate([{$lookup:{from:"ordenadores2",localField:"_id", foreignField:"cliente_id",as:"ordenadores"}}])
+db.clientes.aggregate({$lookup:{from:"ordenadores2",localField:"_id", foreignField:"cliente_id",as:"ordenadores"}}])
+db.clientes.aggregate([{$lookup:{from:"ordenadores2",localField:"_id", foreignField:"cliente_id",as:"ordenadores"}},{$project:{dni:1,nombre:1,ordenadores:1}}])
+// ordenadores de maria
+
+
+db.
+clientes
+.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},
+{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores"}},
+{"$unwind":"$ordenadores"}]);
+
+
+
+//vamos a ver una operacion de unwind (relajarse)
+db.clientes.aggregate([{$project:{dni:1,nombre:1,ordenadores:1}},{$lookup:{from:"ordenadores2",localField:"_id",foreignField:"cliente_id",as:"ordenadores"}}]);
