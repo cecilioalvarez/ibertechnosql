@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff75"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4c",
+  "concepto": "ordenador",
+  "importe": 200,
+  "fecha": {
+    "$date": "2020-10-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff76"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4d",
+  "concepto": "tablet",
+  "importe": 300,
+  "fecha": {
+    "$date": "2020-05-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff77"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4e",
+  "concepto": "raton",
+  "importe": 100,
+  "fecha": {
+    "$date": "2019-05-10T00:30:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff78"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4f",
+  "concepto": "mesa",
+  "importe": 300
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff79"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4e",
+  "concepto": "raton",
+  "importe": 100
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff7a"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4f",
+  "concepto": "mesa",
+  "importe": 300
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff7b"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4e",
+  "concepto": "ordenador2",
+  "importe": 100
+},
+{
+  "_id": {
+    "$oid": "64e86bfad197e8322b98ff7c"
+  },
+  "clientes_id": "64e84e4cd197e8322b98ff4f",
+  "concepto": "ordenador3",
+  "importe": 300
+}]
